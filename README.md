@@ -27,3 +27,53 @@ Meera AI uses conventional HTTP response codes to indicate the success or failur
 ## Authorization
 
 ### Basic Auth
+
+# API Endpoint: Login
+
+## Login
+
+Logs in users and retrieves an authentication token. This endpoint allows the users to authenticate by providing their email and password. Upon successful authentication, a token is returned which can be used for accessing other protected resources.
+
+### Error Codes
+
+| Error Code | Description               |
+|------------|---------------------------|
+| 200        | Success                   |
+| 400        | Wrong credentials response|
+
+### Authorization
+
+**Basic Auth**
+
+This folder is using Basic Auth from the MeeraAI API collection.
+
+## POST
+
+### Login User and Get Token
+
+**Endpoint**: `//api/v1/login`
+
+Provide user email and password as a JSON request.
+
+**Required:**
+- Email
+- Password
+
+### Authorization
+
+**Basic Auth**
+
+This request uses Basic Auth from the MeeraAI API collection.
+
+### Headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+### Body
+
+```json
+{
+  "email": "<email>",
+  "password": "<string>"
+}
